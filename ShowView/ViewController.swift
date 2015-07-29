@@ -17,7 +17,18 @@ class ViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func showView(){
+        
+       // showViewController(SecondViewController(nibName: "SecondViewController", bundle: nil), sender: self);
+        let vc = SecondViewController(nibName: "SecondViewController", bundle:nil)
+        vc.sentMessage = "Hey There"
+        showViewController(vc, sender: self);
+        
+        
     }
 
 
